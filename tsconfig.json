@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "jsx": "react",
+    "noEmit": true,
+    "baseUrl": "./",
+    "pretty": true,
+    "esModuleInterop": true,
+    "stripInternal": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "target": "es2017",
+    "paths": {
+      "@lingui/babel-plugin-extract-messages": [
+        "./packages/babel-plugin-extract-messages/src"
+      ],
+      "@lingui/core": ["./packages/core/src"],
+      "@lingui/message-utils/*": ["./packages/message-utils/src/*"],
+      "@lingui/cli/api": ["./packages/cli/src/api"],
+      "@lingui/react": ["./packages/react/src"],
+      "@lingui/conf": ["./packages/conf/src"],
+      "@lingui/macro/node": ["./packages/macro/src/index.ts"],
+      "@lingui/macro": ["./packages/macro/src"],
+      "@lingui/format-po": ["./packages/format-po/src/po.ts"],
+      "@lingui/format-json": ["./packages/format-json/src/json.ts"],
+      "@lingui/extractor-vue": ["./packages/extractor-vue/src"]
+    }
+  },
+  "exclude": [
+    "examples/**",
+    "dist",
+    "website",
+    "**/fixtures/**",
+    "**/__typetests__/**"
+  ]
+}

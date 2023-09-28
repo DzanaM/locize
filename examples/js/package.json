@@ -1,0 +1,25 @@
+{
+  "name": "vanilla-js",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Tomáš Ehrlich",
+    "email": "tomas.ehrlich@gmail.com"
+  },
+  "scripts": {
+    "test": "lingui compile && jest src",
+    "extract": "lingui extract --clean"
+  },
+  "dependencies": {
+    "@lingui/core": "^4.1.2",
+    "@lingui/macro": "^4.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@lingui/cli": "^4.1.2",
+    "babel-plugin-macros": "^3.1.0",
+    "jest": "^29.5.0"
+  }
+}

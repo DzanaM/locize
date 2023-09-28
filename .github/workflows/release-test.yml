@@ -1,0 +1,47 @@
+name: release-workflow-test
+
+on:
+  pull_request:
+    branches:
+      - '*'
+  push:
+    branches:
+      - main
+      - next
+
+jobs:
+  release-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          always-auth: true
+          node-version: 16
+          cache: 'yarn'
+
+      - name: Install dependencies if needed
+        run: yarn install
+
+      - name: Publish with Verdaccio
+        run: |
+          git switch -c "pull-request"
+          npm i -g {verdaccio,verdaccio-auth-memory,verdaccio-memory}
+          nohup verdaccio --config .github/verdaccio/config.yaml &>verdaccio.log &
+          yarn verdaccio:release
+
+      - name: Run tests in create-react-app
+        run: |
+          cp ./.github/verdaccio/.yarnrc.yml ./examples/create-react-app/.yarnrc.yml
+          cd ./examples/create-react-app
+          yarn up "@lingui/*"
+          yarn test:ci
+
+      - name: Print Verdaccio Log
+        if: ${{ failure() }}
+        run: cat ./verdaccio.log

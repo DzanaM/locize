@@ -1,0 +1,59 @@
+{
+  "name": "@lingui/remote-loader",
+  "version": "3.11.0",
+  "sideEffects": false,
+  "private": true,
+  "description": "Load remotely your translations",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "author": {
+    "name": "Sergio Moreno",
+    "email": "sergiomorenoalbert@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "remotely",
+    "component",
+    "i18n",
+    "internationalization",
+    "i9n",
+    "translation",
+    "icu",
+    "messageformat"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist && unbuild",
+    "stub": "unbuild --stub"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lingui/js-lingui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lingui/js-lingui/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/"
+  ],
+  "dependencies": {
+    "@lingui/core": "4.0.0",
+    "@lingui/message-utils": "4.0.0",
+    "ramda": "^0.27.1"
+  },
+  "devDependencies": {
+    "unbuild": "2.0.0"
+  }
+}

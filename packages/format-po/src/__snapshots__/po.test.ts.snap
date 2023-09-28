@@ -1,0 +1,277 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pofile format should correct badly used comments 1`] = `
+{
+  withDescriptionAndComments: {
+    comments: [
+      Single description only,
+      Second description?,
+      js-lingui-explicit-id,
+    ],
+    context: null,
+    extra: {
+      flags: [],
+      translatorComments: [
+        Translator comment,
+      ],
+    },
+    obsolete: false,
+    origin: [],
+    translation: Second description joins translator comments,
+  },
+  withMultipleDescriptions: {
+    comments: [
+      First description,
+      Second comment,
+      Third comment,
+      js-lingui-explicit-id,
+    ],
+    context: null,
+    extra: {
+      flags: [],
+      translatorComments: [],
+    },
+    obsolete: false,
+    origin: [],
+    translation: Extra comments are separated from the first description line,
+  },
+}
+`;
+
+exports[`pofile format should not add lingui id more than one time 1`] = `
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2018-08-27 10:00+0000\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"X-Generator: @lingui/cli\\n"
+"Language: en\\n"
+
+#. js-lingui-id: Dgzql1
+msgctxt "my context"
+msgid "with generated id"
+msgstr ""
+
+`;
+
+exports[`pofile format should print lingui id if printLinguiId = true 1`] = `
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2018-08-27 10:00+0000\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"X-Generator: @lingui/cli\\n"
+"Language: en\\n"
+
+#. js-lingui-id: Dgzql1
+msgctxt "my context"
+msgid "with generated id"
+msgstr ""
+
+`;
+
+exports[`pofile format should read catalog in pofile format 1`] = `
+{
+  obsolete: {
+    comments: [
+      js-lingui-explicit-id,
+    ],
+    context: null,
+    extra: {
+      flags: [],
+      translatorComments: [],
+    },
+    obsolete: true,
+    origin: [],
+    translation: Is marked as obsolete,
+  },
+  static: {
+    comments: [
+      js-lingui-explicit-id,
+    ],
+    context: null,
+    extra: {
+      flags: [],
+      translatorComments: [],
+    },
+    obsolete: false,
+    origin: [],
+    translation: Static message,
+  },
+  veryLongString: {
+    comments: [
+      js-lingui-explicit-id,
+    ],
+    context: null,
+    extra: {
+      flags: [],
+      translatorComments: [],
+    },
+    obsolete: false,
+    origin: [],
+    translation: One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human,
+  },
+  withComments: {
+    comments: [
+      js-lingui-explicit-id,
+    ],
+    context: null,
+    extra: {
+      flags: [],
+      translatorComments: [
+        Translator comment,
+        This one might come from developer,
+      ],
+    },
+    obsolete: false,
+    origin: [],
+    translation: Support translator comments separately,
+  },
+  withDescription: {
+    comments: [
+      Description is comment from developers to translators,
+      js-lingui-explicit-id,
+    ],
+    context: null,
+    extra: {
+      flags: [],
+      translatorComments: [],
+    },
+    obsolete: false,
+    origin: [],
+    translation: Message with description,
+  },
+  withMultipleOrigins: {
+    comments: [
+      js-lingui-explicit-id,
+    ],
+    context: null,
+    extra: {
+      flags: [],
+      translatorComments: [],
+    },
+    obsolete: false,
+    origin: [
+      [
+        src/App.js,
+        4,
+      ],
+      [
+        src/Component.js,
+        2,
+      ],
+    ],
+    translation: Message with multiple origin,
+  },
+  withOrigin: {
+    comments: [
+      js-lingui-explicit-id,
+    ],
+    context: null,
+    extra: {
+      flags: [],
+      translatorComments: [],
+    },
+    obsolete: false,
+    origin: [
+      [
+        src/App.js,
+        4,
+      ],
+    ],
+    translation: Message with origin,
+  },
+  xC8QeX: {
+    comments: [
+      js-lingui-id: pXy+hm,
+    ],
+    context: null,
+    extra: {
+      flags: [],
+      translatorComments: [],
+    },
+    message: Message with default hash id,
+    obsolete: false,
+    origin: [],
+    translation: Translation for: Message with default-hash id,
+  },
+  xLTujh: {
+    comments: [],
+    context: null,
+    extra: {
+      flags: [
+        fuzzy,
+        otherFlag,
+        explicit-id,
+      ],
+      translatorComments: [],
+    },
+    message: withFlags,
+    obsolete: false,
+    origin: [],
+    translation: Keeps any flags that are defined,
+  },
+}
+`;
+
+exports[`pofile format should write catalog in pofile format 1`] = `
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2018-08-27 10:00+0000\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"X-Generator: @lingui/cli\\n"
+"Language: en\\n"
+
+#. js-lingui-explicit-id
+msgid "static"
+msgstr "Static message"
+
+#. js-lingui-explicit-id
+#: src/App.js:4
+msgid "withOrigin"
+msgstr "Message with origin"
+
+#. js-lingui-explicit-id
+msgctxt "my context"
+msgid "withContext"
+msgstr "Message with context"
+
+msgctxt "my context"
+msgid "with generated id"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/App.js:4
+#: src/Component.js:2
+msgid "withMultipleOrigins"
+msgstr "Message with multiple origin"
+
+#. Description is comment from developers to translators
+#. js-lingui-explicit-id
+msgid "withDescription"
+msgstr "Message with description"
+
+# Translator comment
+# This one might come from developer
+#. js-lingui-explicit-id
+msgid "withComments"
+msgstr "Support translator comments separately"
+
+#. js-lingui-explicit-id
+#~ msgid "obsolete"
+#~ msgstr "Obsolete message"
+
+#. js-lingui-explicit-id
+#, fuzzy,otherFlag
+msgid "withFlags"
+msgstr "Keeps any flags that are defined"
+
+#. js-lingui-explicit-id
+msgid "veryLongString"
+msgstr "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. \\"What's happened to me?\\" he thought. It wasn't a dream. His room, a proper human"
+
+`;

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@lingui/conf config file extractBabelOptions deprecation if deprecated extractBabelOptions is defined, we show deprecation message 1`] = `
+● Deprecation Warning:
+
+ Option extractBabelOptions was removed. 
+    
+    Please remove it from your config file. 
+
+    You can find more information here: https://lingui.dev/releases/migration-4
+    
+
+Documentation: https://lingui.dev/ref/conf
+`;
+
+exports[`@lingui/conf should return default config 1`] = `
+{
+  catalogs: [
+    {
+      exclude: [
+        */node_modules/*,
+      ],
+      include: [
+        .,
+      ],
+      path: ./locale/{locale}/messages,
+    },
+  ],
+  catalogsMergePath: ,
+  compileNamespace: cjs,
+  compilerBabelOptions: {
+    jsescOption: {
+      minimal: true,
+    },
+    minified: true,
+  },
+  extractorParserOptions: {
+    flow: false,
+    tsExperimentalDecorators: false,
+  },
+  fallbackLocales: {
+    en-gb: en,
+  },
+  format: po,
+  formatOptions: {
+    lineNumbers: true,
+    origins: true,
+  },
+  locales: [
+    en-gb,
+  ],
+  orderBy: message,
+  pseudoLocale: ,
+  rootDir: .,
+  runtimeConfigModule: {
+    TransImportModule: @lingui/react,
+    TransImportName: Trans,
+    i18nImportModule: @lingui/core,
+    i18nImportName: i18n,
+  },
+  service: {
+    apiKey: ,
+    name: ,
+  },
+  sourceLocale: ,
+}
+`;
+
+exports[`@lingui/conf should throw error if config is not discovered 1`] = `
+Lingui was unable to find a config!
+
+Create 'lingui.config.js' file with LinguiJS configuration in root of your project (next to package.json). See https://lingui.dev/ref/conf
+`;

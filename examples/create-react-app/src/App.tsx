@@ -12,10 +12,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img
-          className="App-logo"
-          src="https://avatars3.githubusercontent.com/u/11225539?s=200&v=4"
-        />
         <h3 data-testid="h3-title">
           <Trans>Language switcher example: </Trans>
         </h3>

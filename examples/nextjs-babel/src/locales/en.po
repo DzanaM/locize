@@ -31,8 +31,8 @@ msgid "Cyan"
 msgstr "Cyan"
 
 #: src/pages/index.tsx:36
-msgid "Documentation →"
-msgstr "Documentation →"
+msgid "Documentation "
+msgstr "Documentation "
 
 #: src/components/Layout.tsx:23
 msgid "Example project using LinguiJS"

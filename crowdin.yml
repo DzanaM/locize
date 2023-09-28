@@ -22,7 +22,7 @@ files:
 
     - # File 2
         source: "examples/nextjs-babel/src/locales/en.po"
-        translation: "examples/create-react-app/src/locales/%two_letters_code%.po"
+        translation: "examples/nextjs-babel/src/locales/%two_letters_code%.po"
 #files: [
 #  {
 #    #

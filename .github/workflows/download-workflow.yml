@@ -1,11 +1,9 @@
 name: Crowdin Action
 
 on:
-  push:
-    paths: ['examples/create-react-app/src/locales/**']
-    branches: [ main ]
+ workflow_dispatch:
 
-premissions: write-all
+permissions: write-all
 
 jobs:
   crowdin:

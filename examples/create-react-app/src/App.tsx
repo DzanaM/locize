@@ -4,7 +4,7 @@ import { Trans, Plural } from "@lingui/macro"
 
 import { locales, dynamicActivate } from "./i18n"
 import { useLingui } from "@lingui/react"
-import {localize} from "./LocalizationManager";
+import { localize } from "./LocalizationManager"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +21,7 @@ function App() {
         <span> {localize('appName')}</span>
         <span> {localize('city')}</span>
         <span> {localize('country')}</span>
+        <span> {localize('heart')}</span>
 
         <div className="lang-container">
           {Object.values(locales).map((locale, index) => (

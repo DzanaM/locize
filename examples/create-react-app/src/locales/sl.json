@@ -1,6 +1,7 @@
 {
   "langSwitcher": "Language switcher example:",
   "appName": "Valoress",
-  "city": "City",
-  "country": "Country"
+  "city": "Kraj",
+  "country": "Država",
+  "heart": "Srce"
 }

@@ -19,6 +19,7 @@ function App() {
           {localize('langSwitcher')}
         </h3>
         <span> {localize('appName')}</span>
+        <span> {localize('langSwitcher')}</span>
         <span> {localize('city')}</span>
         <span> {localize('country')}</span>
         <span> {localize('heart')}</span>

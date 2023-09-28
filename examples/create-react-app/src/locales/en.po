@@ -18,8 +18,8 @@ msgid "{count, plural, zero {There are no books} one {There's one book} other {T
 msgstr "{count, plural, zero {There are no books} one {There's one book} other {There are # books}}"
 
 #: src/App.tsx:50
-msgid "Date formatter example"
-msgstr "Date formatter example:"
+msgid "Time formatter example"
+msgstr "Time formatter example"
 
 #: src/App.tsx:40
 msgid "Decrement"

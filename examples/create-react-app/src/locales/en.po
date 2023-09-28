@@ -13,38 +13,54 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/App.tsx:43
+#: src/App.tsx:48
 msgid "{count, plural, zero {There are no books} one {There's one book} other {There are # books}}"
 msgstr "{count, plural, zero {There are no books} one {There's one book} other {There are # books}}"
 
-#: src/App.tsx:50
-msgid "Time formatter example:"
-msgstr "Time formatter example:"
+#: src/App.tsx:55
+msgid "Date formatter example:"
+msgstr "Date formatter example:"
 
-#: src/App.tsx:40
+#: src/App.tsx:45
 msgid "Decrement"
 msgstr "Decrement"
 
-#: src/App.tsx:59
+#: src/App.tsx:64
 msgid "I have a balance of {0}"
 msgstr "I have a balance of {0}"
 
+#: src/App.tsx:42
+msgid "Increment"
+msgstr "Increment"
+
 #: src/App.tsx:37
-msgid "Increment Increment"
-msgstr "Increment Increment"
+#~ msgid "Increment Increment"
+#~ msgstr "Increment Increment"
 
 #: src/App.tsx:19
-msgid "Language switcher example"
-msgstr "Language switcher example"
+#~ msgid "Language switcher example"
+#~ msgstr "Language switcher example"
+
+#: src/App.tsx:20
+msgid "Language switcher example:"
+msgstr "Language switcher example:"
 
 #: src/App.tsx:56
-msgid "Number formatter"
-msgstr "Number formatter"
+#~ msgid "Number formatter"
+#~ msgstr "Number formatter"
 
-#: src/App.tsx:33
+#: src/App.tsx:61
+msgid "Number formatter example:"
+msgstr "Number formatter example:"
+
+#: src/App.tsx:38
 msgid "Plurals example:"
 msgstr "Plurals example:"
 
-#: src/App.tsx:53
+#: src/App.tsx:50
+#~ msgid "Time formatter example:"
+#~ msgstr "Time formatter example:"
+
+#: src/App.tsx:58
 msgid "Today is {0}"
 msgstr "Today is {0}"

@@ -4,6 +4,7 @@ import { Trans, Plural } from "@lingui/macro"
 
 import { locales, dynamicActivate } from "./i18n"
 import { useLingui } from "@lingui/react"
+import {localize} from "./LocalizationManager";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,13 +12,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img
-          className="App-logo"
-          src="https://avatars3.githubusercontent.com/u/11225539?s=200&v=4"
-        />
         <h3 data-testid="h3-title">
           <Trans>Language switcher example: </Trans>
         </h3>
+        <h3 data-testid="h3-title">
+          {localize('langSwitcher')}
+        </h3>
+        <span> {localize('appName')}</span>
+        <span> {localize('city')}</span>
+        <span> {localize('country')}</span>
+
         <div className="lang-container">
           {Object.values(locales).map((locale, index) => (
             <button
